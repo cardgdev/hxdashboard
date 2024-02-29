@@ -1,0 +1,14 @@
+<vbox>
+    <tableview id="tv4" width="816" height="624">
+        <header hidden="true" width="100%">
+            <column width="10%" id="colA"  />
+            <column id="colB" width="90%" />
+        </header>
+        <item-renderer>
+            <button id="colA" icon="play.png" style="background: #93C572; cursor: pointer;"/>
+        </item-renderer>
+        <item-renderer verticalAlign="center">
+            <label id="colB" width="100%" />
+        </item-renderer>
+    </tableview>
+</vbox>

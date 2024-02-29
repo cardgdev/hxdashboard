@@ -1,0 +1,15 @@
+{
+    "name": "hxdashboard",
+    "description": "",
+    "license": "MIT",
+    "tags": [
+      "cross", "utility"
+    ],
+    "classPath": "src",
+    "contributors": [
+      "cgdev"
+    ],
+    "releasenote": "Initial release",
+    "version": "0.0.1",
+    "dependencies": {}
+  }
