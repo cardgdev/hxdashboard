@@ -11,34 +11,9 @@ import haxe.ui.HaxeUIApp;
 
 class Main {
     public static function main() {
-
-
-        new HxDashboard([
-            HxDashboardUtils.createCMDProcess("Run cmd process", "hl command.hl"),
-            getCustomProcess()    
+        var app = new HxDashboard([
+            HxDashboardUtils.createCMDProcess("Generate DB Types", "hl D:\\code\\baugzburg\\b-dbops\\run.hl")
         ]);
-    }
-
-    public static function getCustomProcess(): HxDashboardProcess {
-        return Process("Run custom process", 
-        () -> {
-            var payload = {data: startWork()}; //any type
-            return payload;
-        }, 
-        (payload, op) -> {
-            switch op {
-                case OnFrame(dt): {
-                    if(payload.data.isDone()){
-                        return Complete;
-                    }
-                    return WaitNextFrame;
-                }
-                case Kill: {
-                    payload.data.kill();
-                    return Killed;
-                }
-            }
-        });
     }
 }
 

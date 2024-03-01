@@ -1,9 +1,10 @@
 {
     "name": "hxdashboard",
-    "description": "",
+    "description": "Simple GUI dashboard to run local Haxe ops processes",
     "license": "MIT",
+    "url" : "https://github.com/cardgdev/hxdashboard",
     "tags": [
-      "cross", "utility"
+      "cross", "utility", "gui", "dashboard"
     ],
     "classPath": "src",
     "contributors": [
@@ -11,5 +12,10 @@
     ],
     "releasenote": "Initial release",
     "version": "0.0.1",
-    "dependencies": {}
+    "dependencies": {
+      "heaps": "",
+      "hlsdl": "",
+      "haxeui-core": "",
+      "haxeui-heaps": ""
+    }
   }
