@@ -11,8 +11,8 @@ import haxe.ui.HaxeUIApp;
 
 class Main {
     public static function main() {
-        var app = new HxDashboard([
-            HxDashboardUtils.createCMDProcess("Generate DB Types", "hl D:\\code\\baugzburg\\b-dbops\\run.hl")
+        new HxDashboard([
+           //processes here
         ]);
     }
 }
