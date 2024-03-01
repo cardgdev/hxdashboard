@@ -30,17 +30,14 @@ class HxDashboardView extends VBox {
                     case Process(name, onStart, coroutine): {
                         var coroutineTag = "C" + e.itemIndex;
                         if(IsCoroutineRunning(coroutineTag)){
-                            trace("Coroutine Running");
                             KillCoroutine(coroutineTag);
                             (cast e.source: haxe.ui.components.Button).icon = "play.png";
                             (cast e.source: haxe.ui.components.Button).backgroundColor = 0x93C572;
                         }
                         else{
-                            trace("Coroutine Not Running");
                             (cast e.source: haxe.ui.components.Button).icon = "pause.png";
                             (cast e.source: haxe.ui.components.Button).backgroundColor = 0xC70039;
                             OnCoroutine(coroutineTag, Completed, () -> {
-                                trace("Coroutine completed");
                                 (cast e.source: haxe.ui.components.Button).icon = "play.png";
                                 (cast e.source: haxe.ui.components.Button).backgroundColor = 0x93C572;
                                 return false;
@@ -54,27 +51,6 @@ class HxDashboardView extends VBox {
                 }
             }
         };
-        /*var t = new haxe.Timer(1000);
-        t.run = () -> {
-            trace(tv4.findComponent("0"));
-            Toolkit.callLater(() -> {
-                tv4.walkComponents((c) -> {
-                    trace(c);
-                    return true;
-                });
-            });
-            t.stop();
-        };*/
-        
-        
-        /*tv4.on(UIEvent.READY, function(e:UIEvent) {
-            for (row in cast tv4.components) {
-                trace('Row component: $row');
-                for (cell in row.components) {
-                    trace('Cell component: $cell');
-                }
-            }
-        });*/
     }
 
     function createProcItem(proc: HxDashboardProcess) {

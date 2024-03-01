@@ -10,7 +10,6 @@ class HxDashboardUtils {
         }, (proc, op) -> {
             switch op {
                 case OnFrame(dt): {
-                    trace(proc.exitCode(false));
                     if(proc.exitCode(false) == null){
                         return WaitNextFrame;
                     }
